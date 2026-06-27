@@ -9,26 +9,7 @@ export default function App() {
   const [coords, setCoords] = useState(null);
   const [image, setImage] = useState(null);
 
-  const getLocation = () => {
 
-    navigator.geolocation.getCurrentPosition(
-
-      (position) => {
-
-        setCoords({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        });
-
-      },
-
-      (err) => {
-        alert(err.message);
-      }
-
-    );
-
-  };
 
 const capture = () => {
   navigator.geolocation.getCurrentPosition(
